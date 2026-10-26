@@ -1,0 +1,352 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --pink: #ec4899;
+  --dark-pink: #9d174d;
+  --light-pink: #fff0f6;
+  --text: #702344;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at top left, #ffe0ed, transparent 55%),
+    linear-gradient(145deg, #fff8fb, #ffeaf3, #fff1f7);
+  display: grid;
+  place-items: center;
+  padding: 76px 16px 24px;
+  overflow-x: hidden;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 510px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #ffd3e5;
+  border-radius: 28px;
+  padding: clamp(24px, 6vw, 42px);
+  box-shadow: 0 20px 60px rgba(190, 24, 93, 0.12);
+  text-align: center;
+  animation: appear 0.55s ease both;
+}
+
+.hidden {
+  display: none !important;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--dark-pink);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  margin: 12px 0;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #c02669;
+}
+
+.emoji-big {
+  font-size: 3.5rem;
+  margin: 10px 0;
+  animation: bob 2s ease-in-out infinite;
+}
+
+.subtitle {
+  max-width: 340px;
+  margin: 12px auto 26px;
+  color: #88506a;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #f3b4d0;
+  border-radius: 14px;
+  background: #fff8fb;
+  color: var(--text);
+  outline: none;
+  margin-bottom: 12px;
+}
+
+input:focus {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px #fce7f3;
+}
+
+.primary-button, .secondary-button {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  padding: 15px 18px;
+  font-weight: 700;
+  margin-top: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-button {
+  color: white;
+  background: linear-gradient(135deg, #ec4899, #be185d);
+  box-shadow: 0 8px 20px #ec489933;
+}
+
+.secondary-button {
+  color: var(--dark-pink);
+  background: #fce7f3;
+}
+
+.primary-button:hover, .secondary-button:hover {
+  transform: translateY(-2px);
+}
+
+.primary-button:active, .secondary-button:active {
+  transform: scale(0.98);
+}
+
+.hint {
+  font-size: 0.83rem;
+  color: #a46b85;
+}
+
+.feedback {
+  min-height: 24px;
+  color: #be185d;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.story-text {
+  font-size: 1.04rem;
+  line-height: 1.95;
+  white-space: pre-line;
+}
+
+.progress-track {
+  height: 6px;
+  background: #fce7f3;
+  border-radius: 99px;
+  overflow: hidden;
+  margin: 24px 0 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #f9a8d4, #db2777);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.quiz-option {
+  background: #fff7fa;
+  color: var(--text);
+  border: 1px solid #f9c7dd;
+  border-radius: 14px;
+  padding: 14px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.quiz-option:hover:not(:disabled) {
+  background: #fce7f3;
+  border-color: var(--pink);
+}
+
+.quiz-option:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.quiz-option.selected {
+  border: 2px solid var(--pink);
+  background: #fce7f3;
+}
+
+.letter {
+  text-align: left;
+  margin-top: 24px;
+  padding: 22px;
+  background: #fff4f8;
+  border: 1px solid #fbcfe8;
+  border-radius: 18px;
+  animation: appear 0.7s ease both;
+}
+
+.letter p {
+  font-size: 0.98rem;
+}
+
+.letter-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  color: var(--dark-pink);
+}
+
+.signature {
+  color: #be185d;
+  font-weight: 700;
+}
+
+.big-heart {
+  font-size: 5rem;
+  animation: heartbeat 1.2s ease-in-out infinite;
+}
+
+.music-button {
+  position: fixed;
+  top: 16px;
+  right: 14px;
+  z-index: 10;
+  border: 1px solid #f9c7dd;
+  border-radius: 99px;
+  background: #ffffffed;
+  color: #9d174d;
+  padding: 10px 14px;
+  box-shadow: 0 5px 20px #9d174d12;
+}
+
+.tiny-hearts {
+  text-align: center;
+  color: #ec4899;
+  letter-spacing: 12px;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+footer {
+  text-align: center;
+  color: #b76c8e;
+  font-size: 0.78rem;
+  padding: 22px 0 0;
+}
+
+#hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -40px;
+  animation: floatUp linear forwards;
+  opacity: 0.7;
+  will-change: transform, opacity;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.7; }
+  to {
+    transform: translateY(-115vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.12); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.08); }
+}
+
+@media (max-width: 400px) {
+  body { padding: 70px 12px 18px; }
+  .card { border-radius: 22px; padding: 23px 18px; }
+  .story-text { font-size: 0.98rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+.youtube-music-container {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  left: -10000px;
+  top: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.youtube-music-container iframe {
+  width: 200px;
+  height: 200px;
+  border: 0;
+}
+
+

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f6">
+  <title>Our Little Forever ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <button id="musicButton" class="music-button" type="button"
+          aria-pressed="false">♫ Music: OFF</button>
+          
+
+<div class="youtube-music-container">
+  <iframe
+    id="ammadiPlayer"
+    width="200"
+    height="200"
+    src="https://www.youtube.com/embed/ekAYewieHKA?enablejsapi=1&origin=http://127.0.0.1:5500&playsinline=1"
+    title="Ammadi song"
+    allow="autoplay; encrypted-media; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+</div>
+
+
+           <main class="container">
+    <div class="tiny-hearts" aria-hidden="true">♡ ♥ ♡</div>
+
+    <!-- PASSWORD SCREEN -->
+    <section id="lockScreen" class="card">
+      <div class="emoji-big">💌</div>
+      <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+      <h1>Hey, Nanalluu! ❤️</h1>
+      <p class="subtitle">
+        Someone made a tiny world just for you.
+          Can you unlock it? 🥹
+      </p>
+
+      <form id="passwordForm">
+        <label for="passwordInput">Enter our secret password</label>
+        <input id="passwordInput" type="password"
+               placeholder="Your secret word..." required
+               autocomplete="off">
+        <button class="primary-button" type="submit">
+          Unlock my surprise 💗
+        </button>
+      </form>
+      <p id="passwordMessage" class="feedback" aria-live="polite"></p>
+      <p class="hint">Psst... idhi oka love story start ayina day. 🤭</p>
+    </section>
+
+    <!-- LOVE STORY -->
+    <section id="storyScreen" class="card hidden">
+      <p class="eyebrow" id="stepLabel">OUR STORY · 1</p>
+      <div id="storyEmoji" class="emoji-big">💕</div>
+      <h1 id="storyTitle">welcome to mana chinniii prapanchamm</h1>
+      <p id="storyText" class="story-text"></p>
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <button id="nextButton" class="primary-button" type="button">
+        Next surprise 💌
+      </button>
+    </section>
+
+    <!-- LOVE QUIZ -->
+    <section id="quizScreen" class="card hidden">
+      <p class="eyebrow">A LITTLE LOVE GAME 🎮</p>
+      <div class="emoji-big">💘</div>
+      <p id="quizCounter" class="hint">Question 1 of 3</p>
+      <h2 id="quizQuestion">Ready, Nanalluu?</h2>
+      <div id="quizOptions" class="options"></div>
+      <p id="quizFeedback" class="feedback" aria-live="polite"></p>
+      <button id="quizNextButton" class="primary-button hidden"
+              type="button">Next question ➜</button>
+    </section>
+
+    <!-- SECRET LETTER -->
+    <section id="letterScreen" class="card hidden">
+      <p class="eyebrow">YOUR FINAL SURPRISE 💌</p>
+      <div class="emoji-big">💗</div>
+      <h1>One last thing, Nanalluuu...</h1>
+      <p class="subtitle">
+        There is a little letter waiting just for you.
+      </p>
+      <button id="openLetterButton" class="primary-button" type="button">
+        Open my letter 🥹
+      </button>
+
+      <article id="letterContent" class="letter hidden">
+        <p class="letter-title">To my Baby, my favourite person ❤️</p>
+        <p>
+          Happy 3rd anniversary, my love! 🥹❤️
+        </p>
+        <p>
+          I wish I could be beside you today, hold your hand,
+          hug you tightly, and see your smile. nen niku eh gift koniyakapovachuu nana 
+          , but I wanted to make something that
+          belongs only to us.
+        </p>
+        <p>
+          ee three years manakiii chalaaa nerpinchayiiii nana and chalaaa memorable kuda.
+         nuvu elaa aipoyav naku ante alavatu aipoyav chaallaaaaa ,
+         unexpeced ga ochav ..bond createeee chesukunamm , anni share chesukovali
+         anipisthadhii .....
+         natho inni days unav ante nuvey .....
+         kaniiii em magic undhoo , enni godavalu ayinaaa 
+         mallii adhe love tho adhe happiness tho untammm ...!!!
+        </p>
+        <p>
+          My favourite gift would be more memories with you.
+          More laughter, more silly conversations, more little
+          moments, and more anniversaries together. ❤️
+          kani okate okati na mood swings barinchuu nanalluu ...inkaa 
+          mana madhyalo na edupu gurinchi epudu nuvu thisi padeyodhu nanalluu
+          nen chinna pilla kdha atlne edustha chinna chinna vatiki nuvu kakapothe 
+          inkevaru ardham chesukuntaru chepuuu ...so adhi okateee ..epduu ayina godavalutho nidra povadhu
+          nen edusthunte lyt thisukovadhu....antheeee!!!
+        </p>
+        <p>
+          I can't promise every day will be perfect, Nanalluuuu.
+          But I hope we keep learning, understanding, and
+          choosing kindness with each other.
+        </p>
+        <p>
+          Thank you for being part of my story.
+          nen mallii mana story start cheyali anukunte nuvey ....nithoneeeee.
+           🫂
+        </p>
+        <p class="signature">Happy 3 years to us, kanna. ♾️<br>
+          I love youuu chalaaaaaa! 💋❤️</p>
+      </article>
+
+      <button id="finishButton" class="primary-button hidden"
+              type="button">One last surprise ❤️</button>
+    </section>
+
+    <!-- FINAL SCREEN -->
+     
+    <section id="finalScreen" class="card hidden">
+      <p class="eyebrow">OUR LITTLE FOREVER ❤️</p>
+      <div class="emoji-big">💗</div>
+      <h1>Happy 3rd Anniversary! I LOVEEEE YOUUUU ALWAYSSSS CHALLAAAA</h1>
+      <p class="subtitle">
+        Three beautiful years, and our story is still being written. ❤️
+      </p>
+
+      <button id="timelineButton" class="secondary-button" type="button">
+        Our journey · 2023–2026 💗
+      </button>
+
+      <button id="restartButton" class="secondary-button" type="button">
+        Relive our story ↻
+      </button>
+    </section>
+
+  <!-- RELATIONSHIP TIMELINE -->
+    <section id="timelineScreen" class="card hidden">
+      <p class="eyebrow">OUR JOURNEY · 2023–2026</p>
+      <div class="emoji-big">💗</div>
+      <h1>Our Little Forever</h1>
+      <p class="subtitle">
+        Three years of our story, one beautiful memory at a time. ❤️
+      </p>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-heart">🌷</div>
+          <div class="timeline-content">
+            <p class="timeline-year">2023</p>
+            <h2>The Beginning</h2>
+            <p>The year our little story began. A new chapter, a special connection, and the start of something precious. 💌</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-heart">💕</div>
+          <div class="timeline-content">
+            <p class="timeline-year">2024</p>
+            <h2>Growing Closer</h2>
+            <p>More conversations, more laughter, and more little things that made our bond special. 🫂</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-heart">✨</div>
+          <div class="timeline-content">
+            <p class="timeline-year">2025</p>
+            <h2>Our Memories</h2>
+            <p>Another chapter of learning, understanding, and collecting memories that belong to us. ❤️</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-heart">♾️</div>
+          <div class="timeline-content">
+            <p class="timeline-year">2026</p>
+            <h2>Our Little Forever</h2>
+            <p>Three years behind us, a new chapter ahead, and so many more moments to look forward to. 💗</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="signature">Our story is still being written. ♾️</p>
+
+      <button id="backToFinalButton" class="secondary-button" type="button">
+        Back to our anniversary ❤️
+      </button>
+    </section>
+
+  <footer>Made with love, just for you · ♡</footer>
+  </main>
+
+  <script src="script.js"></script>
+  
+
+</body>
+</html>

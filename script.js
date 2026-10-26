@@ -326,6 +326,7 @@ function createYouTubePlayer() {
   });
 }
 
+
 function toggleMusic() {
   if (!youtubeReady || !youtubePlayer) {
     musicButton.textContent = "♫ Loading music…";
@@ -336,9 +337,12 @@ function toggleMusic() {
   if (musicPlaying) {
     youtubePlayer.pauseVideo();
   } else {
+    youtubePlayer.unMute();
+    youtubePlayer.setVolume(100);
     youtubePlayer.playVideo();
   }
 }
+
 
 musicButton.addEventListener("click", toggleMusic);
 loadYouTubeAPI();
